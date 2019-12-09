@@ -130,3 +130,4 @@ D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\ContosoWebAPI.csproj.CopyComplete
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\ContosoWebAPI.dll
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\ContosoWebAPI.pdb
+D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\ContosoWebAPI.csprojAssemblyReference.cache

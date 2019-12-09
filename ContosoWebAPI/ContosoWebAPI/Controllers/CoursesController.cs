@@ -42,7 +42,6 @@ namespace ContosoWebAPI.Controllers
         [HttpGet("vwDepartmentCourseCount ")]
         public async Task<ActionResult<IEnumerable<VwDepartmentCourseCount>>> GetvwDepartmentCourseCount()
         {
-            //Raw SQL Query 的方式查詢
             var vwDepartmentCourseCount = await _context.VwDepartmentCourseCount
                     .FromSqlRaw("SELECT * FROM dbo.VwDepartmentCourseCount")
                     .ToListAsync();
@@ -72,8 +71,8 @@ namespace ContosoWebAPI.Controllers
             {
                 return BadRequest();
             }
-
-            _context.Entry(course).State = EntityState.Modified;
+            _context.Update(course);
+           // _context.Entry(course).State = EntityState.Modified;
 
             try
             {
@@ -93,7 +92,62 @@ namespace ContosoWebAPI.Controllers
 
             return NoContent();
         }
+        [HttpPut("Department/{id}")]
+        public async Task<IActionResult> PutDepartment(int id, Department department)
+        {
+            if (id != department.DepartmentId)
+            {
+                return BadRequest();
+            }
+            _context.Update(department);
+            // _context.Entry(course).State = EntityState.Modified;
 
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CourseExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
+        [HttpPut("Person/{id}")]
+        public async Task<IActionResult> PutPerson(int id, Person person)
+        {
+            if (id != person.Id)
+            {
+                return BadRequest();
+            }
+            _context.Update(person);
+            // _context.Entry(course).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CourseExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
+        }
         // POST: api/Courses
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
