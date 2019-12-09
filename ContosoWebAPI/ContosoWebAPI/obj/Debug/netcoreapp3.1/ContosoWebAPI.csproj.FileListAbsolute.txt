@@ -3,7 +3,6 @@ D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\bin\Debug\netcoreapp3.1
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\bin\Debug\netcoreapp3.1\efpt.config.json
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\bin\Debug\netcoreapp3.1\ContosoWebAPI.exe
-D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\ContosoWebAPI.csprojAssemblyReference.cache
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\staticwebassets\ContosoWebAPI.StaticWebAssets.Manifest.cache
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\staticwebassets\ContosoWebAPI.StaticWebAssets.xml
 D:\project1\aspNetCoreWebAPI\ContosoWebAPI\ContosoWebAPI\obj\Debug\netcoreapp3.1\ContosoWebAPI.AssemblyInfoInputs.cache
