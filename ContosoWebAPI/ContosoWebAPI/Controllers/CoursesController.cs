@@ -26,6 +26,16 @@ namespace ContosoWebAPI.Controllers
         {
             return await _context.Course.ToListAsync();
         }
+        [HttpGet("Department")]
+        public async Task<ActionResult<IEnumerable<Department>>> GetDepartment()
+        {
+            return await _context.Department.ToListAsync();
+        }
+        [HttpGet("Person")]
+        public async Task<ActionResult<IEnumerable<Person>>> GetPerson()
+        {
+            return await _context.Person.ToListAsync();
+        }
         // GET: api/Courses/vwCourseStudents
         [HttpGet("vwCourseStudents")]
         public async Task<ActionResult<IEnumerable<VwCourseStudents>>> GetvwCourseStudents()
@@ -71,6 +81,7 @@ namespace ContosoWebAPI.Controllers
             {
                 return BadRequest();
             }
+            course.DateModified = DateTime.Now;
             _context.Update(course);
            // _context.Entry(course).State = EntityState.Modified;
 
@@ -99,6 +110,7 @@ namespace ContosoWebAPI.Controllers
             {
                 return BadRequest();
             }
+            department.DateModified = DateTime.Now;
             _context.Update(department);
             // _context.Entry(course).State = EntityState.Modified;
 
@@ -127,6 +139,7 @@ namespace ContosoWebAPI.Controllers
             {
                 return BadRequest();
             }
+            person.DateModified = DateTime.Now;
             _context.Update(person);
             // _context.Entry(course).State = EntityState.Modified;
 
