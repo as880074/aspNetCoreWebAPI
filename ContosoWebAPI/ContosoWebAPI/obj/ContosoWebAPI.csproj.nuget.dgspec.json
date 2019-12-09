@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj": {}
+    "D:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj": {}
   },
   "projects": {
-    "d:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj": {
+    "D:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj",
+        "projectUniqueName": "D:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj",
         "projectName": "ContosoWebAPI",
-        "projectPath": "d:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj",
+        "projectPath": "D:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\ContosoWebAPI.csproj",
         "packagesPath": "C:\\Users\\T&X\\.nuget\\packages\\",
-        "outputPath": "d:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\obj\\",
+        "outputPath": "D:\\project1\\aspNetCoreWebAPI\\ContosoWebAPI\\ContosoWebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -52,9 +52,21 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.0, )"
             }
