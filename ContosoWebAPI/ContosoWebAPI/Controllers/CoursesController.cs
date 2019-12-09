@@ -24,17 +24,17 @@ namespace ContosoWebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Course>>> GetCourse()
         {
-            return await _context.Course.ToListAsync();
+            return await _context.Course.Where(x=>x.IsDeleted == false).ToListAsync();
         }
         [HttpGet("Department")]
         public async Task<ActionResult<IEnumerable<Department>>> GetDepartment()
         {
-            return await _context.Department.ToListAsync();
+            return await _context.Department.Where(x => x.IsDeleted == false).ToListAsync();
         }
         [HttpGet("Person")]
         public async Task<ActionResult<IEnumerable<Person>>> GetPerson()
         {
-            return await _context.Person.ToListAsync();
+            return await _context.Person.Where(x => x.IsDeleted == false).ToListAsync();
         }
         // GET: api/Courses/vwCourseStudents
         [HttpGet("vwCourseStudents")]
@@ -183,12 +183,42 @@ namespace ContosoWebAPI.Controllers
                 return NotFound();
             }
 
-            _context.Course.Remove(course);
+            course.IsDeleted = true;
+            _context.Update(course);
             await _context.SaveChangesAsync();
 
             return course;
         }
+        [HttpDelete("Department/{id}")]
+        public async Task<ActionResult<Department>> DeleteDepartment(int id)
+        {
+            var department = await _context.Department.FindAsync(id);
+            if (department == null)
+            {
+                return NotFound();
+            }
 
+            department.IsDeleted = true;
+            _context.Update(department);
+            await _context.SaveChangesAsync();
+
+            return department;
+        }
+        [HttpDelete("Person/{id}")]
+        public async Task<ActionResult<Person>> DeletePerson(int id)
+        {
+            var person = await _context.Person.FindAsync(id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            person.IsDeleted = true;
+            _context.Update(person);
+            await _context.SaveChangesAsync();
+
+            return person;
+        }
         private bool CourseExists(int id)
         {
             return _context.Course.Any(e => e.CourseId == id);
