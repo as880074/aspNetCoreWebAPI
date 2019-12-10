@@ -11,11 +11,11 @@ namespace ContosoWebAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CoursesController : ControllerBase
+    public class CourseController : ControllerBase
     {
         private readonly ContosouniversityContext _context;
 
-        public CoursesController(ContosouniversityContext context)
+        public CourseController(ContosouniversityContext context)
         {
             _context = context;
         }
