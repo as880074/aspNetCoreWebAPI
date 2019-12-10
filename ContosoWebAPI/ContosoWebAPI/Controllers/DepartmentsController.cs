@@ -27,7 +27,7 @@ namespace ContosoWebAPI.Controllers
             return await _context.Department.Where(x => x.IsDeleted == false).ToListAsync();
         }
         // GET: api/Departments/vwDepartmentCourseCount
-        [HttpGet("vwDepartmentCourseCount ")]
+        [HttpGet("vwDepartmentCourseCount")]
         public async Task<ActionResult<IEnumerable<VwDepartmentCourseCount>>> GetvwDepartmentCourseCount()
         {
             var vwDepartmentCourseCount = await _context.VwDepartmentCourseCount
