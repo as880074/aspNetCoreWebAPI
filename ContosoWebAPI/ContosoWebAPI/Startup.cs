@@ -32,8 +32,9 @@ namespace ContosoWebAPI
             
             services.AddDbContext<ContosouniversityContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-               
-            
+            // Register the Swagger services
+            services.AddSwaggerDocument();
+
 
         }
 
@@ -48,6 +49,10 @@ namespace ContosoWebAPI
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // Register the Swagger generator and the Swagger UI middlewares
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseAuthorization();
 

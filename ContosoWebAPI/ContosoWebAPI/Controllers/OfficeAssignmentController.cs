@@ -10,6 +10,7 @@ using ContosoWebAPI.Models;
 namespace ContosoWebAPI.Controllers
 {
     [Route("api/[controller]")]
+    [ApiConventionType(typeof(DefaultApiConventions))]
     [ApiController]
     public class OfficeAssignmentController : ControllerBase
     {
